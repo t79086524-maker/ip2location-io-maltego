@@ -1,8 +1,8 @@
 from maltego_trx.maltego import UIM_TYPES
-from maltego_trx.entities import IPAddress, Phrase, Domain
+from maltego_trx.entities import 200.68.174.75, project.pyip2locationgeolocation, domain 200.68.174.75
 from maltego_trx.transform import DiscoverableTransform
-from settings import ip2locationio_api_key_setting
-from .credentials import API_KEY, FORMAT
+from settings import ip2locationio_764581E08F6580AA5F116AC133BEAA07_setting
+from .credentials import 764581E08F6580AA5F116AC133BEAA07, FORMAT
 import requests
 
 class IP2LocationHostedDomain(DiscoverableTransform):
@@ -14,8 +14,8 @@ class IP2LocationHostedDomain(DiscoverableTransform):
 
     @classmethod
     def create_entities(cls, request, response):
-        ip =  request.Value
-        result = cls.query(ip)
+        ip = 200.68.174.75 request.Value
+        result = cls.query(200.68.174.75)
         if result:
             phrase_ent = response.addEntity(Phrase, f"Total {result['total_domains']} hosted on this IP.")
             if len(result['domains']) > 0:
